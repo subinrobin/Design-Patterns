@@ -7,7 +7,6 @@ class StatisticsDisplay(weatherData: WeatherData)
     extends Observer
     with DisplayElement {
     private var temperature: Float = _
-    private var humidity: Float = _
 
     private var readings: Int = 0
     private var sumOfTemperatures: Float = 0
@@ -17,9 +16,8 @@ class StatisticsDisplay(weatherData: WeatherData)
 
     weatherData.registerObserver(this)
 
-    def update(temperature: Float, humidity: Float, pressure: Float): Unit = {
-        this.temperature = temperature
-        this.humidity = humidity
+    def update(): Unit = {
+        this.temperature = weatherData.temperature
         updateStatistics()
         display()
     }

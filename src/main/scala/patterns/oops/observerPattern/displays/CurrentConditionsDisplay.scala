@@ -11,9 +11,9 @@ class CurrentConditionsDisplay(weatherData: WeatherData)
 
     weatherData.registerObserver(this)
 
-    def update(temperature: Float, humidity: Float, pressure: Float): Unit = {
-        this.temperature = temperature
-        this.humidity = humidity
+    def update(): Unit = {
+        this.temperature = weatherData.temperature
+        this.humidity = weatherData.humidity
         display()
     }
 
