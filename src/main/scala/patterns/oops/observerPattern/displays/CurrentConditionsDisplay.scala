@@ -18,8 +18,6 @@ class CurrentConditionsDisplay(weatherData: WeatherData)
     }
 
     def display(): Unit = {
-        println(
-          s"Current conditions: ${temperature}F degrees and ${humidity}% humidity"
-        )
+        println(s"Current conditions: ${temperature}F degrees and ${humidity}% humidity")
     }
 }
