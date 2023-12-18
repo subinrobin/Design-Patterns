@@ -5,3 +5,16 @@ Be careful when choosing the areas of code that need to be extended; applying th
 ## Facts
 * Decorators have the same supertype as the objects they decorate
 * You can use one or more decorators to wrap an object
+
+## OO Principles
+* Encapsulate what varies
+* Favor composition over inheritance
+* Program to interface, not implementations
+* Strive for loosely couped designs between objects that interact
+* Classes should be open for extension but closed for modification
+
+## OO Basics
+* Abstraction
+* Encapsulation
+* Polymorphism
+* Inheritance
