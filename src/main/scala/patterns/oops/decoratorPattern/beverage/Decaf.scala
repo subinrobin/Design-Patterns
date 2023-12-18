@@ -1,7 +1,7 @@
 package patterns.oops.decoratorPattern.beverage
 
 class Decaf extends Beverage {
-    desciption_=("Decaf coffee")
+    description_=("Decaf coffee")
 
     def cost(): Double = 1.05
 }
