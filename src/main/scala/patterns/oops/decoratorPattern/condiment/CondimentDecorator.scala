@@ -2,8 +2,7 @@ package patterns.oops.decoratorPattern.condiment
 
 import patterns.oops.decoratorPattern.beverage.Beverage
 
-trait CondimentDecorator extends Beverage {
-    val beverage: Beverage
+abstract class CondimentDecorator(beverage: Beverage) extends Beverage {
 
-    def description_=(value: String): Unit
+    def description: String
 }
