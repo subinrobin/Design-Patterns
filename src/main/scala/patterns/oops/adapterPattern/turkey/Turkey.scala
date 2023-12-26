@@ -1,4 +1,4 @@
-package patterns.oops.adapterPattern.duckExample.turkey
+package patterns.oops.adapterPattern.turkey
 
 trait Turkey {
   

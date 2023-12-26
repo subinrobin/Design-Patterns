@@ -1,4 +1,4 @@
-package patterns.oops.adapterPattern.duckExample.duck
+package patterns.oops.adapterPattern.duck
 
 trait Duck {
   

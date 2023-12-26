@@ -1,12 +1,12 @@
-package patterns.oops.adapterPattern.duckExample
+package patterns.oops.adapterPattern
 
-import patterns.oops.adapterPattern.duckExample.duck.MallardDuck
-import patterns.oops.adapterPattern.duckExample.turkey.WildTurkey
-import patterns.oops.adapterPattern.duckExample.adapter.TurkeyAdapter
-import patterns.oops.adapterPattern.duckExample.duck.Duck
-import patterns.oops.adapterPattern.duckExample.adapter.DuckAdapter
-import patterns.oops.adapterPattern.duckExample.turkey.Turkey
-import patterns.oops.adapterPattern.duckExample.adapter.ClassAdapter
+import patterns.oops.adapterPattern.duck.MallardDuck
+import patterns.oops.adapterPattern.turkey.WildTurkey
+import patterns.oops.adapterPattern.adapter.TurkeyAdapter
+import patterns.oops.adapterPattern.duck.Duck
+import patterns.oops.adapterPattern.adapter.DuckAdapter
+import patterns.oops.adapterPattern.turkey.Turkey
+import patterns.oops.adapterPattern.adapter.ClassAdapter
 
 object DuckTestDrive {
   

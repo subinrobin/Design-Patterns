@@ -1,7 +1,7 @@
-package patterns.oops.adapterPattern.duckExample.adapter
+package patterns.oops.adapterPattern.adapter
 
-import patterns.oops.adapterPattern.duckExample.turkey.Turkey
-import patterns.oops.adapterPattern.duckExample.duck.Duck
+import patterns.oops.adapterPattern.turkey.Turkey
+import patterns.oops.adapterPattern.duck.Duck
 import scala.util.Random
 
 class DuckAdapter(duck: Duck) extends Turkey {
