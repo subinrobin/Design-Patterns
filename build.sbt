@@ -1,4 +1,3 @@
-
 name := "Design-Patterns"
 organization := "com.learn.patterns"
 version := "1.0"
