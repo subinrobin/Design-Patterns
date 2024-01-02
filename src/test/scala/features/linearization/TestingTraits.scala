@@ -1,8 +1,8 @@
 package features.linearization
 
+import features.mixinCompositions.A
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
-import features.mixinCompositions.A
 
 // class DoubledMultiplierIdentityTest
 //     extends AnyFlatSpec

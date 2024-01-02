@@ -9,7 +9,7 @@ trait Adder {
 }
 
 class Container[T](data: T) {
-    def compare(other: T) = data.equals(other)
+    def compare(other: T): Boolean = data.==(other)
 }
 
 object GenericsExamples extends Adder {
@@ -33,7 +33,7 @@ trait ContainerAT {
     type T
     val data: T
 
-    def compare(other: T) = data.equals(other)
+    def compare(other: T): Boolean = data.==(other)
 }
 
 class StringContainer(val data: String) extends ContainerAT {
@@ -119,7 +119,7 @@ object GenericPrinterExample {
         System.out.println(genericLaser.print(Text(), Toner(), Paper()))
         System.out.println(genericThreeD.print(Model(), Plastic(), Air()))
 
-        // val wrongPrinter = new GenericPrinterImpl[Model, Toner, Air]
-        // System.out.println(wrongPrinter.print(Model(), Toner(), Air()))
+        val wrongPrinter = new GenericPrinterImpl[Model, Toner, Air]
+        System.out.println(wrongPrinter.print(Model(), Toner(), Air()))
     }
 }

@@ -1,8 +1,8 @@
 package features.traits
 
 abstract class Connector {
-    def connect()
-    def close()
+    def connect(): Unit
+    def close(): Unit
 }
 
 trait ConnectorWithHelper extends Connector {

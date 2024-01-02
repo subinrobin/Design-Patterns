@@ -11,3 +11,4 @@ metals.sbt
 project/project
 target
 .bsp
+.idea

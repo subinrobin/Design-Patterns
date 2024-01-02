@@ -1,9 +1,6 @@
 package features.mixinCompositions
 
-import features.traits.Alarm
-import features.traits.Notifier
-import features.traits.ConnectorWithHelper
-import features.traits.Connector
+import features.traits.{Alarm, Connector, ConnectorWithHelper, Notifier}
 
 class Watch(brand: String, initialTime: Long) {
     def getTime(): Long = System.currentTimeMillis() - initialTime
@@ -77,22 +74,24 @@ trait AlarmNotifier {
 }
 
 object SelfTypeWatchUser {
-  def main(args: Array[String]): Unit = {
-    // AlarmNotifier can be extended by a class only if it extends Notifier as well
-    // val watch1 = new Watch("alarm with notification", 1000L) with AlarmNotifier {}
-    val watch = new Watch("alarm with notification", 1000L) with AlarmNotifier with Notifier {
-      override def trigger(): String = "Alarm triggered."
+    def main(args: Array[String]): Unit = {
+        // AlarmNotifier can be extended by a class only if it extends Notifier as well
+        // val watch1 = new Watch("alarm with notification", 1000L) with AlarmNotifier {}
+        val watch = new Watch("alarm with notification", 1000L)
+            with AlarmNotifier
+            with Notifier {
+            override def trigger(): String = "Alarm triggered."
 
-      override def clear(): Unit = {
-        System.out.println("Alarm cleared.")
-      }
+            override def clear(): Unit = {
+                System.out.println("Alarm cleared.")
+            }
 
-      override val notificationMessage: String = "The notification."
+            override val notificationMessage: String = "The notification."
+        }
+
+        System.out.println(watch.trigger())
+        watch.printNotification()
+        System.out.println(s"The time is ${watch.getTime()}.")
+        watch.clear()
     }
-
-    System.out.println(watch.trigger())
-    watch.printNotification()
-    System.out.println(s"The time is ${watch.getTime()}.")
-    watch.clear()
-  }
 }

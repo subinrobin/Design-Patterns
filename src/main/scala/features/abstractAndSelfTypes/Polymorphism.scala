@@ -23,7 +23,7 @@ object SubtypePolymorphismExample {
     }
 }
 
-// Parametric polymorphism inf fp was shown in generics earlier (AbstractTypes.scala)
+// Parametric polymorphism in fp was shown in generics earlier (AbstractTypes.scala)
 
 // Ad hoc polymorphism (somewhat similar to function overloading), compile time
 trait Adder1[T] {
