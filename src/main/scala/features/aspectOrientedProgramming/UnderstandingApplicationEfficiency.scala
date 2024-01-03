@@ -3,6 +3,8 @@ package features.aspectOrientedProgramming
 import org.json4s._
 import org.json4s.jackson.JsonMethods._
 
+import java.io.InputStream
+
 sealed case class Person(firstName: String, lastName: String, age: Int)
 
 trait DataReader {
@@ -13,9 +15,10 @@ trait DataReader {
 class DataReaderImpl extends DataReader {
     implicit val formats: DefaultFormats.type = DefaultFormats
 
-    private def readUntimed(): List[Person] =
-        parse(StreamInput(getClass.getResourceAsStream("/aop/users.json")))
-            .extract[List[Person]]
+    private def readUntimed(): List[Person] = {
+        val inputStream: InputStream = getClass.getResourceAsStream("/aop/users.json")
+        parse(inputStream).extract[List[Person]]
+    }
 
     override def readData(): List[Person] = readUntimed()
 
@@ -41,9 +44,10 @@ object DataReaderExample {
 class DataReaderImplWithLogging extends DataReader {
     implicit val formats: DefaultFormats.type = DefaultFormats
 
-    private def readUntimed(): List[Person] =
-        parse(StreamInput(getClass.getResourceAsStream("/aop/users.json")))
-          .extract[List[Person]]
+    private def readUntimed(): List[Person] = {
+        val inputStream: InputStream = getClass.getResourceAsStream("/aop/users.json")
+        parse(inputStream).extract[List[Person]]
+    }
 
     override def readData(): List[Person] = {
         val startMillis = System.currentTimeMillis()

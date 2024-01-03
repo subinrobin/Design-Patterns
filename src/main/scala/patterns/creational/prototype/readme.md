@@ -1,0 +1,1 @@
+The prototype design pattern involves creating objects by cloning from existing ones. Its purpose is related to performance and try to avoid expensive calls.

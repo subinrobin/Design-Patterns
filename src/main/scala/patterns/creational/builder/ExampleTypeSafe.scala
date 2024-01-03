@@ -52,6 +52,7 @@ object PersonBuilderTS {
 
 // set firstname should have happened before set lastname
 // drawbacks: Complexity, Mutability, predefined order of initialization
+// use only when compile time validation is required
 object PersonBuilderTypeSafeExample {
     def main(args: Array[String]): Unit = {
         val person = PersonBuilderTS()

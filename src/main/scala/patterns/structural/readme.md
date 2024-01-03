@@ -1,0 +1,1 @@
+Structural design patterns are concerned with composing objects and classes. It uses _**Inheritance**_ and _**Composition**_ to obtain new functionality. Identifying the right relationship between objects in an application simplifies application structure.

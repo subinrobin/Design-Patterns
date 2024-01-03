@@ -1,0 +1,1 @@
+Decorator pattern is to add functionality to objects without extending them and without affecting the behavior of other objects from the same class.

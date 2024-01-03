@@ -1,0 +1,1 @@
+Adapter Design Pattern helps incompatible interfaces work together without modifying their source code.
