@@ -9,27 +9,39 @@ import java.util.zip.GZIPOutputStream
 import scala.jdk.CollectionConverters.IteratorHasAsScala
 
 trait InputReader {
+    println("constructor: ", this.getClass.getCanonicalName)
     def readLines(): LazyList[String]
 }
 
 class AdvancedInputReader(reader: BufferedReader) extends InputReader {
-    override def readLines(): LazyList[String] =
+    println("constructor: ", this.getClass.getCanonicalName)
+    override def readLines(): LazyList[String] = {
+        println(this.getClass.getName, "readLine")
         reader.lines().iterator().asScala.to(LazyList)
+    }
 }
 
 abstract class InputReaderDecorator(inputReader: InputReader) extends InputReader {
-    override def readLines(): LazyList[String] =
+    println("constructor: ", this.getClass.getCanonicalName)
+    override def readLines(): LazyList[String] = {
+        println(this.getClass.getName, "readLine")
         inputReader.readLines()
+    }
 }
 
 class CapitalizedInputReader(inputReader: InputReader) extends InputReaderDecorator(inputReader) {
-    override def readLines(): LazyList[String] =
+    println("constructor: ", this.getClass.getCanonicalName)
+    override def readLines(): LazyList[String] = {
+        println(this.getClass.getName, "readLine")
         super.readLines().map(_.toUpperCase)
+    }
 }
 
 class CompressingInputReader(inputReader: InputReader) extends InputReaderDecorator(inputReader) with LazyLogging {
+    println("constructor: ", this.getClass.getCanonicalName)
     override def readLines(): LazyList[String] = super.readLines().map {
         line =>
+            println(this.getClass.getName, "readLine")
             val text = line.getBytes(Charset.forName("UTF-8"))
             logger.info("Length before compression: {}", text.length.toString)
             val output = new ByteArrayOutputStream()
@@ -48,7 +60,11 @@ class CompressingInputReader(inputReader: InputReader) extends InputReaderDecora
 }
 
 class Base64EncoderInputReader(inputReader: InputReader) extends InputReaderDecorator(inputReader) {
-    override def readLines(): LazyList[String] = super.readLines().map(line => Base64.getEncoder.encodeToString(line.getBytes(Charset.forName("UTF-8"))))
+    println("constructor: ", this.getClass.getCanonicalName)
+    override def readLines(): LazyList[String] = {
+        println(this.getClass.getName, "readLine")
+        super.readLines().map(line => Base64.getEncoder.encodeToString(line.getBytes(Charset.forName("UTF-8"))))
+    }
 }
 
 object DecoratorExample {
