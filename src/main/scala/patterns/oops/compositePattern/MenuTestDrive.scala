@@ -116,7 +116,7 @@ object MenuTestDrive {
         dinerMenu.add(dessertMenu)
 
         val dessertItem1 = MenuItem("Apple Pie", 
-        "Apple Pie with a flakey crust, topped with vanilla ice cream",
+        "Apple Pie with a flake crust, topped with vanilla ice cream",
         true, 1.59)
         dessertMenu.add(dessertItem1)
 
