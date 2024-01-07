@@ -1,0 +1,1 @@
+Behavioral design patterns describe how objects and classes interact with each other using messages. Their purpose is to identify and implement common communication patterns between objects in an application. They define object interaction in such a way that the communication between objects is easy and coupling is still kept at a low level.
