@@ -12,4 +12,5 @@ libraryDependencies ++= Seq(
     "org.slf4j" % "slf4j-log4j12" % "2.0.5",
     "commons-codec" % "commons-codec" % "1.15",
     "org.json4s" %% "json4s-native" % "4.0.6",
+    "com.github.tototoshi" %% "scala-csv" % "1.3.10",
 )
