@@ -14,4 +14,5 @@ libraryDependencies ++= Seq(
     "org.json4s" %% "json4s-native" % "4.0.6",
     "com.github.tototoshi" %% "scala-csv" % "1.3.10",
     "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4",
+    "org.scalaz" %% "scalaz-core" % "7.3.7",
 )
