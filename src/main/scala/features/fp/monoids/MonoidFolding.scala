@@ -1,6 +1,5 @@
-package patterns.functional
+package features.fp.monoids
 
-import patterns.functional.monoids.Monoid
 
 package object monoids {
     val intAddition: Monoid[Int] = new Monoid[Int] {

@@ -1,4 +1,4 @@
-package patterns.functional.monoids
+package features.fp.monoids
 
 // Scala representation of a monoid
 trait Monoid[T] {

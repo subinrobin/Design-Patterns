@@ -1,4 +1,6 @@
-package patterns.functional.monoids
+package features.fp.monoids
+
+import features.fp.monoids.monoids.{intMultiplication, stringConcatenation}
 
 // associative, hence nested operations done independent and parallel
 // eg. 4!. op(op(op(1, 2), 3), 4)

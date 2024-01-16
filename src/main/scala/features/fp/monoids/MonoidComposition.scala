@@ -1,4 +1,6 @@
-package patterns.functional.monoids
+package features.fp.monoids
+
+import features.fp.monoids.monoids.{intAddition, intMultiplication}
 
 object MonoidComposition {
     def compose[T, Y](a: Monoid[T], b: Monoid[Y]): Monoid[(T, Y)] =

@@ -1,4 +1,4 @@
-package patterns.functional.functors
+package features.fp.functors
 
 package object functors {
     val listFunctor: Functor[List] = new Functor[List] {
@@ -6,7 +6,7 @@ package object functors {
     }
 }
 
-
+// functors can be collections, container or any custom defined class
 object FunctorsExample {
     import functors._
     def main(args: Array[String]): Unit = {
